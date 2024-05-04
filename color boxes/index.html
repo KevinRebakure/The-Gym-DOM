@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Sample DOM</title>
+  </head>
+  <body>
+    <div id="box1">
+      <div id="box2">
+        <div id="box3">
+          <div id="box4">
+            <div id="box5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const [box1, box2, box3, box4, box5] = document.querySelectorAll("div");
+      let [state1, state2, state3, state4, state5] = [
+        true,
+        true,
+        true,
+        true,
+        true,
+      ];
+      box1.addEventListener("click", function (event) {
+        switch (event.target.id) {
+          case "box1":
+            state1 = !state1;
+            break;
+          case "box2":
+            state2 = !state2;
+            break;
+          case "box3":
+            state3 = !state3;
+            break;
+          case "box4":
+            state4 = !state4;
+            break;
+          case "box5":
+            state5 = !state5;
+            break;
+          default:
+            console.log("Weird ERROR!");
+          // break;
+        }
+        colors();
+      });
+
+      function colors() {
+        box1.style.backgroundColor = state1 ? "white" : "salmon";
+        box2.style.backgroundColor = state2 ? "white" : "burlywood";
+        box3.style.backgroundColor = state3 ? "white" : "cadetblue";
+        box4.style.backgroundColor = state4 ? "white" : "chartreuse";
+        box5.style.backgroundColor = state5 ? "white" : "skyblue";
+      }
+    </script>
+  </body>
+</html>

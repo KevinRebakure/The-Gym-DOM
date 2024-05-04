@@ -1,0 +1,37 @@
+#box1 {
+  // centering
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //   styles
+  border: 1px solid salmon;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: white;
+  #box2 {
+    border: 1px solid burlywood;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+    #box3 {
+      border: 1px solid cadetblue;
+      padding: 50px;
+      border-radius: 10px;
+      background-color: white;
+      #box4 {
+        border: 1px solid chartreuse;
+        padding: 50px;
+        border-radius: 10px;
+        background-color: white;
+        #box5 {
+          border: 1px solid skyblue;
+          padding: 50px;
+          border-radius: 10px;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
